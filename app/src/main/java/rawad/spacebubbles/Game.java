@@ -30,6 +30,7 @@ public class Game extends Activity {
         bubblesAdder();
 
         //this is a comment
+        //dfdfd
     }
 
     public void alertText(String text) {

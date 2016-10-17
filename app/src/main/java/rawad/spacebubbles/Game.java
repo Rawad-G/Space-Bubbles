@@ -29,7 +29,7 @@ public class Game extends Activity {
         gameEngine();
         bubblesAdder();
 
-        //this is a comment
+        //sdsd
     }
 
     public void alertText(String text) {

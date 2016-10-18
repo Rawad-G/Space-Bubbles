@@ -13,6 +13,7 @@ public class Game extends Activity {
     private int width;
     private RelativeLayout gameLinearLayout;
     BubblesCollection collection;
+    private SpaceCraft spaceCraft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -25,11 +26,10 @@ public class Game extends Activity {
         this.height = displaymetrics.heightPixels;
         this.width = displaymetrics.widthPixels;
         this.collection = new BubblesCollection(gameLinearLayout, this.width, this.height, this);
+        this.spaceCraft = new SpaceCraft(gameLinearLayout, this.width, this);
 
         gameEngine();
         bubblesAdder();
-
-        //sdsd
     }
 
     public void alertText(String text) {
@@ -51,9 +51,9 @@ public class Game extends Activity {
             @Override
             public void run() {
                 collection.updateBubbles();
-                h.postDelayed(this, 1000);
+                h.postDelayed(this, 500);
             }
-        }, 1000);
+        }, 500);
     }
     public void bubblesAdder(){
         final Handler h = new Handler();
@@ -61,8 +61,8 @@ public class Game extends Activity {
             @Override
             public void run() {
                 collection.addBubble();
-                h.postDelayed(this, 5000);
+                h.postDelayed(this, 1000);
             }
-        }, 5000);
+        }, 1000);
     }
 }

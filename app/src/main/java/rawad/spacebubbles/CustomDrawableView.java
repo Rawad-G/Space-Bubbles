@@ -9,6 +9,7 @@ import android.view.View;
 public class CustomDrawableView extends View {
     private ShapeDrawable mDrawable;
 
+
     public CustomDrawableView(Context context, int a, int b) {
         super(context);
 
@@ -21,12 +22,9 @@ public class CustomDrawableView extends View {
         mDrawable.getPaint().setColor(0xff74AC23);
         mDrawable.setBounds(x, y, x + width, y + height);
 
-        invalidate();
-
     }
 
     protected void onDraw(Canvas canvas) {
         mDrawable.draw(canvas);
-        invalidate();
     }
 }
